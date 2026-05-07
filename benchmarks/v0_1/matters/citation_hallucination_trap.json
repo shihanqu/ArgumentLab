@@ -1,0 +1,20 @@
+{
+  "id": "citation_hallucination_trap",
+  "name": "Citation hallucination trap",
+  "description": "Draft cites cases but no uploaded authority supports the propositions.",
+  "planted_issues": ["authority_issue", "citation_not_found", "external_validity_not_checked"],
+  "simulation_config": {
+    "procedural_posture": "motion_to_dismiss",
+    "jurisdiction": "New York",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true }
+  },
+  "documents": [
+    {
+      "filename": "draft_motion.txt",
+      "document_type": "motion",
+      "text": "Plaintiff relies on Smith v. Example Corp., 999 F.3d 123, for the rule that every delay is automatically material."
+    }
+  ],
+  "emails": []
+}
+

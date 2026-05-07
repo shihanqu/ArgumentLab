@@ -1,0 +1,25 @@
+{
+  "id": "employment_timeline_inconsistency",
+  "name": "Employment dispute with timeline inconsistency",
+  "description": "Draft chronology conflicts with emails about complaint timing and termination.",
+  "planted_issues": ["email_chronology_issue", "contradicted_fact", "credibility_timeline"],
+  "simulation_config": {
+    "procedural_posture": "summary_judgment",
+    "jurisdiction": "Federal",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true }
+  },
+  "documents": [
+    {
+      "filename": "employment_brief.txt",
+      "document_type": "motion",
+      "text": "The draft says Plaintiff first complained after termination and never gave notice before discipline."
+    }
+  ],
+  "emails": [
+    {
+      "subject": "HR complaint",
+      "text": "From: plaintiff@example.com\nTo: hr@example.com\nDate: May 1, 2025 10:00 AM MST\nSubject: HR complaint\n\nI am providing notice of the harassment issue and request intervention before any further discipline."
+    }
+  ]
+}
+

@@ -1,0 +1,25 @@
+{
+  "id": "summary_judgment_disputed_fact",
+  "name": "Summary judgment packet with disputed fact",
+  "description": "Draft calls facts undisputed despite record excerpts showing a factual dispute.",
+  "planted_issues": ["unsupported_fact", "contradicted_fact", "judge_persona_disagreement"],
+  "simulation_config": {
+    "procedural_posture": "summary_judgment",
+    "jurisdiction": "Texas",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true }
+  },
+  "documents": [
+    {
+      "filename": "sj_motion.txt",
+      "document_type": "motion",
+      "text": "The motion says it is undisputed that all deliverables were accepted without objection."
+    },
+    {
+      "filename": "deposition_excerpt.txt",
+      "document_type": "transcript",
+      "text": "Q: Did you object to the deliverables? A: Yes, I objected in writing on April 2 and again during the project call."
+    }
+  ],
+  "emails": []
+}
+

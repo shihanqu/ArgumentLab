@@ -1,0 +1,25 @@
+{
+  "id": "notice_dispute_earlier_notice",
+  "name": "Notice dispute where emails prove earlier notice",
+  "description": "A notice argument is weakened by emails showing earlier notice and reservation of rights.",
+  "planted_issues": ["email_chronology_issue", "notice_issue", "waiver"],
+  "simulation_config": {
+    "procedural_posture": "motion_to_dismiss",
+    "jurisdiction": "Delaware",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true }
+  },
+  "documents": [
+    {
+      "filename": "opposition.txt",
+      "document_type": "opposition",
+      "text": "The opposition argues no notice occurred before suit and therefore the claim is premature. The argument says there was never written notice."
+    }
+  ],
+  "emails": [
+    {
+      "subject": "Formal notice",
+      "text": "From: buyer@example.com\nTo: seller@example.com\nDate: January 14, 2025 8:15 AM EST\nSubject: Formal notice\n\nThis is written notice of breach. We reserve all rights and request cure by January 24."
+    }
+  ]
+}
+

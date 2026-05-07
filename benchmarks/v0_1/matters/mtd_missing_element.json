@@ -1,0 +1,25 @@
+{
+  "id": "mtd_missing_element",
+  "name": "Motion to dismiss with missing element",
+  "description": "Complaint packet omits a necessary element while draft overstates the pleading.",
+  "planted_issues": ["missing_element", "unsupported_fact", "procedural_issue"],
+  "simulation_config": {
+    "procedural_posture": "motion_to_dismiss",
+    "jurisdiction": "California",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true }
+  },
+  "documents": [
+    {
+      "filename": "complaint.txt",
+      "document_type": "pleading",
+      "text": "The complaint alleges a contract existed and defendant failed to perform. It does not allege damages with specificity."
+    },
+    {
+      "filename": "draft_motion_to_dismiss.txt",
+      "document_type": "motion",
+      "text": "The motion argues the complaint always fails because damages are completely absent and no evidence supports harm."
+    }
+  ],
+  "emails": []
+}
+

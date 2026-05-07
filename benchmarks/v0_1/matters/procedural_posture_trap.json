@@ -1,0 +1,20 @@
+{
+  "id": "procedural_posture_trap",
+  "name": "Procedural posture trap",
+  "description": "Motion-to-dismiss draft relies on summary judgment-style evidence framing.",
+  "planted_issues": ["procedural_issue", "legal_standard_issue", "judge_persona_disagreement"],
+  "simulation_config": {
+    "procedural_posture": "motion_to_dismiss",
+    "jurisdiction": "Federal",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true }
+  },
+  "documents": [
+    {
+      "filename": "mtd_brief.txt",
+      "document_type": "motion",
+      "text": "This motion to dismiss should be granted because undisputed evidence proves plaintiff cannot show reliance, and summary judgment is effectively warranted now."
+    }
+  ],
+  "emails": []
+}
+

@@ -1,0 +1,20 @@
+{
+  "id": "demand_letter_overclaimed_damages",
+  "name": "Demand letter with overclaimed damages",
+  "description": "Demand letter asserts damages without uploaded invoices or causation support.",
+  "planted_issues": ["damages_issue", "unsupported_fact", "overclaiming"],
+  "simulation_config": {
+    "procedural_posture": "demand_letter_review",
+    "jurisdiction": "Illinois",
+    "self_play": { "mode": "quick", "round_count": 1, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true }
+  },
+  "documents": [
+    {
+      "filename": "demand_letter.txt",
+      "document_type": "correspondence",
+      "text": "Dear Counsel: Our client suffered $2,400,000 in undisputed damages. There is no evidence supporting any mitigation defense."
+    }
+  ],
+  "emails": []
+}
+

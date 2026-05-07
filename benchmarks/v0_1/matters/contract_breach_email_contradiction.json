@@ -1,0 +1,30 @@
+{
+  "id": "contract_breach_email_contradiction",
+  "name": "Contract breach with email timeline contradiction",
+  "description": "Draft says defendant first objected after termination, but an earlier email objects before termination.",
+  "planted_issues": ["contradicted_fact", "email_chronology_issue", "unsupported_fact"],
+  "simulation_config": {
+    "procedural_posture": "summary_judgment",
+    "jurisdiction": "New York",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true }
+  },
+  "documents": [
+    {
+      "filename": "draft_motion.txt",
+      "document_type": "motion",
+      "text": "Plaintiff's draft motion states that Defendant first objected after termination and that the breach is undisputed. Plaintiff seeks damages under the services agreement."
+    },
+    {
+      "filename": "services_agreement.txt",
+      "document_type": "contract",
+      "text": "Section 4 requires written notice of material nonconformity within ten days. Section 12 contains an integration clause."
+    }
+  ],
+  "emails": [
+    {
+      "subject": "Objection before termination",
+      "text": "From: defendant@example.com\nTo: plaintiff@example.com\nDate: March 3, 2025 9:00 AM EST\nSubject: Objection before termination\n\nWe object to the invoice and reserve all rights. The work does not conform to Section 4.\n\nFrom: plaintiff@example.com\nTo: defendant@example.com\nDate: March 10, 2025 4:00 PM EST\nSubject: Termination\n\nWe terminate the agreement effective today."
+    }
+  ]
+}
+

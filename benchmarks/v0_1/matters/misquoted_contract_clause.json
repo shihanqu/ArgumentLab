@@ -1,0 +1,26 @@
+{
+  "id": "misquoted_contract_clause",
+  "name": "Misquoted contract clause",
+  "description": "Draft states the contract says notice is optional, but uploaded clause says written notice is required.",
+  "planted_issues": ["misquoted_clause", "contradicted_fact", "textualist_concern"],
+  "simulation_config": {
+    "procedural_posture": "motion_to_dismiss",
+    "jurisdiction": "New York",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true },
+    "judge_panel": ["textualist_contract_formalist", "strict_proceduralist", "pragmatic_trial_judge"]
+  },
+  "documents": [
+    {
+      "filename": "draft_motion.txt",
+      "document_type": "motion",
+      "text": "The draft says the contract never requires written notice and the point is undisputed."
+    },
+    {
+      "filename": "contract.txt",
+      "document_type": "contract",
+      "text": "Section 7: Written notice is required before a party may terminate for breach."
+    }
+  ],
+  "emails": []
+}
+

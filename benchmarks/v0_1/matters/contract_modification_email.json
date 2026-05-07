@@ -1,0 +1,31 @@
+{
+  "id": "contract_modification_email",
+  "name": "Contract modification dispute based on emails",
+  "description": "Emails suggest modification while contract formalist persona pressures integration and written-change clauses.",
+  "planted_issues": ["modification", "waiver", "judge_persona_disagreement"],
+  "simulation_config": {
+    "procedural_posture": "motion_to_dismiss",
+    "jurisdiction": "New York",
+    "self_play": { "mode": "standard", "round_count": 3, "allow_rebuttal": true, "allow_judge_interventions": true, "preserve_disagreement": true },
+    "judge_panel": ["strict_proceduralist", "textualist_contract_formalist", "pragmatic_trial_judge"]
+  },
+  "documents": [
+    {
+      "filename": "agreement.txt",
+      "document_type": "contract",
+      "text": "Section 14: No modification is effective unless in a writing signed by both parties. Section 15: This agreement is integrated."
+    },
+    {
+      "filename": "draft_brief.txt",
+      "document_type": "motion",
+      "text": "The draft argues the parties clearly modified the delivery deadline by email."
+    }
+  ],
+  "emails": [
+    {
+      "subject": "Revised delivery deadline",
+      "text": "From: seller@example.com\nTo: buyer@example.com\nDate: June 6, 2025 2:30 PM EST\nSubject: Revised delivery deadline\n\nWe can modify the deadline to July 1 if you agree by email. Buyer replied: agreed."
+    }
+  ]
+}
+
